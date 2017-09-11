@@ -1,0 +1,25 @@
+<ng-content select="[title]"></ng-content>
+<form #f="ngForm" >
+  
+  <div class="form-group">
+     <label for="email">Email</label>
+     <input type="email" 
+     class="form-control" 
+     placeholder="Enter email address"
+     name="email"
+     ngModel
+     >
+  </div>
+
+  <div class="form-group">
+       <label for="password">Password</label>
+       <input type="password" 
+       class="form-control" 
+       placeholder="Enter the password"
+       name="password"
+       ngModel
+       >
+  </div>
+  <ng-content select="[check]"></ng-content>
+  <ng-content select="[submitbtn]" ></ng-content>
+</form>
