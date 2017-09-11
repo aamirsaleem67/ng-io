@@ -1,19 +1,21 @@
 <div class="container">
   <div class="row">
       <div class="col-md-6">
-        <app-form-content>
+        <!--For Login-->
+        <app-form-content (userSubmit)="handleLogin($event)">
           <h1 title>Sign In</h1>
            <div class="checkbox" check>
-             <label><input type="checkbox">Remember me</label>
+             <label><input type="checkbox" name="mycheck" ngModel>Remember me</label>
            </div>
            <button type="submit" class="btn btn-default" submitbtn>Login</button>
         </app-form-content>
       </div>
+       <!--For register-->
       <div class="col-md-6">
-         <app-form-content>
+        <app-form-content #formContent>
            <h1 title>Register</h1>
-           <button type="submit" class="btn btn-default" submitbtn [disabled]="!f.valid">Register</button>
-         </app-form-content>
+           <button type="submit" class="btn btn-default" submitbtn [disabled]="!formContent.form.valid">Register</button> 
+        </app-form-content>
       </div>
   </div>
 </div>

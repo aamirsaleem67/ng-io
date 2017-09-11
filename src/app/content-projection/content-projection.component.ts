@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-content-projection',
@@ -6,9 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content-projection.component.css']
 })
 export class ContentProjectionComponent implements OnInit {
-
   constructor() { }
-
   ngOnInit() {
+  }
+
+  handleLogin(value: any) {
+       console.log('Login' + value);
+  }
+  handleRegister(value: any) {
+       console.log('Register' + value);
   }
 }

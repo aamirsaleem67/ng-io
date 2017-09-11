@@ -1,5 +1,5 @@
 <ng-content select="[title]"></ng-content>
-<form #f="ngForm" >
+<form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
   
   <div class="form-group">
      <label for="email">Email</label>
@@ -8,6 +8,7 @@
      placeholder="Enter email address"
      name="email"
      ngModel
+     required
      >
   </div>
 
@@ -18,8 +19,11 @@
        placeholder="Enter the password"
        name="password"
        ngModel
+       required
        >
   </div>
-  <ng-content select="[check]"></ng-content>
+   
+  
+  <ng-content select="[check]" ></ng-content>
   <ng-content select="[submitbtn]" ></ng-content>
 </form>
